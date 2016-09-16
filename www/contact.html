@@ -6,6 +6,32 @@
 		<title>Contact Dave's Donuts</title>
 	</head>
 	<body>
+		<h1>Contact Us</h1>
 		
+		<form action="http://mis412.davidrichard.com/form_test" method="post">
+			<p>
+				<label>
+					Name:
+					<input type="text" name="name">
+				</label>
+			</p>
+			<p>
+				<label>
+					Email:
+					<input type="text" name="email_address">
+				</label>
+			</p>
+		     <p>
+		        <label>Tel:
+		           <input type = "tel" placeholder = "(###) ###-####" 
+		              pattern = "\(\d{3}\) +\d{3}-\d{4}" required /> 
+		              (###) ###-####
+		        </label>
+		     </p>
+			<p>
+				<input type="submit">
+			</p>
+		</form>
+
 	</body>
 </html>
