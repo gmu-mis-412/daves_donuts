@@ -12,24 +12,64 @@
 			<p>
 				<label>
 					Name:
-					<input type="text" name="name">
+					<input type="text" name="name" required>
 				</label>
 			</p>
 			<p>
 				<label>
 					Email:
-					<input type="text" name="email_address">
+					<input type="text" name="email_address" required>
 				</label>
 			</p>
 		     <p>
 		        <label>Tel:
-		           <input type = "tel" placeholder = "(###) ###-####" 
+		           <input name="telephone" type = "tel" placeholder = "(###) ###-####" 
 		              pattern = "\(\d{3}\) +\d{3}-\d{4}" required /> 
 		              (###) ###-####
 		        </label>
 		     </p>
+
 			<p>
-				<input type="submit">
+				<strong>Things you liked about our site:</strong><br>
+
+				<label>
+					<input name = "thingsliked" type = "checkbox" value = "Design"> Site Design
+				</label><br>
+				<label>
+					<input name = "thingsliked" type = "checkbox" value = "Links"> Links
+				</label><br>
+				<label>
+					<input name = "thingsliked" type = "checkbox" value = "Ease"> Ease of use
+				</label><br>
+				<label> 
+					<input name = "thingsliked" type = "checkbox" value = "Images"> Images
+				</label><br>
+				<label>
+					<input name = "thingsliked" type = "checkbox" value = "Code"> Source code
+				</label><br>
+			</p>
+
+	         <p>
+	            <label>Rate our site: 
+	               <select name = "rating" required>
+	                  <option value="10">10 Amazing</option>
+	                  <option value="9">9</option>
+	                  <option value="8">8</option>
+	                  <option value="7">7</option>
+	                  <option value="6">6</option>
+	                  <option value="5">5</option>
+	                  <option value="4">4</option>
+	                  <option value="3">3</option>
+	                  <option value="2">2</option>
+	                  <option value="1">1</option>
+	                  <option value="0">Awful</option>
+	               </select>
+	            </label>
+	         </p>
+
+			<p>
+            <input type="submit" value="Submit this Form" />
+            <input type="reset" value="Clear this Form" />
 			</p>
 		</form>
 
