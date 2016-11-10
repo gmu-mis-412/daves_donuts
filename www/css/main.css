@@ -288,7 +288,7 @@ INTRO CONTAINER
     background-attachment: fixed;
 }
  .pricing.background_content{
-    background: url('../images/pricing.jpg') no-repeat center center; 
+    background: url('../images/donuts111.jpg') no-repeat center center; 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -331,6 +331,78 @@ h1 {
     display: inline-block;
     padding: 7px 16px;
     margin: 0;
+}
+
+.tab_wrapper {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.tab_wrapper li{
+    color: white !important;
+    /*padding-left: 10px;*/
+    word-spacing: 5px !important;
+    opacity: .5;
+    margin-right: 30px;
+    border: 2px solid black;
+    margin-bottom: -3px;
+}
+
+.tab_wrapper li.active {
+    opacity: 1;
+}
+
+.tab_wrapper .nav-tabs > li > a {
+    font-size: 2em;
+    margin-right: 0px;
+    background-color: white;
+    border: 3px solid transparent !important;
+    margin-bottom: -3px;
+}
+
+.tab_wrapper .tab-pane {
+    height: 400px;
+    background-color: white;
+    opacity: .9;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.tab_wrapper .tab-pane .sugarfix img {
+    width: 135%;
+    margin-top: 45px;
+}
+
+.tab_wrapper .tab-pane .contact img {
+    width: 89%;
+}
+
+.tab_wrapper .tab-pane .product {
+    
+}
+
+.tab_wrapper .tab-pane .product h2 {
+    font-size: 3em;
+    color: #9E2F27;
+}
+
+.tab_wrapper .tab-pane .product img {
+    float: none;
+}
+
+.tab_wrapper .tab-pane .product .price {
+    font-size: 2em;
+}
+
+.tab_wrapper #holes {
+    background: url('../images/background.png');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.pricing.background_content {
+    height: 655px;
 }
 /*========================
 IMAGE DESCRIPTION BODY CONTENT
