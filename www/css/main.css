@@ -499,6 +499,10 @@ p.sub-footer-text a{
 
 /*Contact */
 
+#contact .container {
+    min-height: 402px;
+}
+
 .contact-text{
     margin:45px auto;
 }
