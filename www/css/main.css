@@ -367,6 +367,7 @@ h1 {
     padding: 20px;
     border: 2px solid black;
 }
+}
 
 .tab_wrapper .tab-pane .sugarfix img {
     width: 135%;
@@ -388,6 +389,7 @@ h1 {
 
 .tab_wrapper .tab-pane .product img {
     float: none;
+    max-width: 280px;
 }
 
 .tab_wrapper .tab-pane .product .price {
