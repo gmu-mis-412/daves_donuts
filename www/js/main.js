@@ -21,6 +21,42 @@
 				$(document).on("scroll", onScroll);
 			});
 		});
+
+		$('#contact-us').submit(function(event) {
+
+			console.log("submited!!!")
+
+			var form_data = {}
+
+			form_data.name = $('#name').val()
+			form_data.email = $('#email').val()
+			form_data.subject = $('#subject').val()
+			form_data.message = $('#message').val()
+
+			$.ajax({
+				url: 'http://mis412.davidrichard.com/contact_form',
+				type: 'POST',
+				dataType: 'json',
+				data: form_data,
+			})
+			.done(function(response) {
+
+				console.log("success");
+				console.log(response.payload);
+
+				$('#thank-you-message').html(response.message);
+
+				$('.contact-form').hide();
+				$('.thank-you').show();
+			})
+			.fail(function() {
+				console.log("error");
+			});			
+
+			event.preventDefault();
+
+		});
+
 	});
  
 	function onScroll(event){
@@ -45,8 +81,8 @@
             });
         });
 
-          $(function() {
-            $( "#datepicker" ).datepicker();
-        });
+        //   $(function() {
+        //     $( "#datepicker" ).datepicker();
+        // });
     
     };

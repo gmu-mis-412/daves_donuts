@@ -510,6 +510,15 @@ p.sub-footer-text a{
     /* -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.2); */
 }
 
+#contact .thank-you {
+    border: solid 1px black;
+    padding: 20px;
+    margin: 20px 40px;
+    text-align: center;
+    font-size: 2em; 
+    display: none;  
+}
+
 .mail-message-area{
     width:100%;
     padding:0 15px;
