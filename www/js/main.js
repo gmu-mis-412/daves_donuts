@@ -96,7 +96,6 @@
 				$(document).on("scroll", onScroll);
 			});
 		});
-		
 	});
 
  
