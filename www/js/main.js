@@ -1,35 +1,20 @@
 
+	// Var to hold base URL for products
+	var base_location = "http://mis412.davidrichard.com/product_services/darla";
 
-	$(document).ready(function () {
-		$(document).on("scroll", onScroll);
+	$(function () {
  
-		$('a[href^="#"]').on('click', function (e) {
-			e.preventDefault();
-			$(document).off("scroll");
- 
-			$('a').each(function () {
-				$(this).removeClass('navactive');
-			})
-			$(this).addClass('navactive');
- 
-			var target = this.hash;
-			$target = $(target);
-			$('html, body').stop().animate({
-				'scrollTop': $target.offset().top+2
-			}, 500, 'swing', function () {
-				window.location.hash = target;
-				$(document).on("scroll", onScroll);
-			});
-		});
-
+ 		// Contact Form
 		$('#contact-us').submit(function(event) {
+
+			event.preventDefault();
 
 			var form_data = {}
 
-			form_data.name = $('#name').val()
-			form_data.email = $('#email').val()
-			form_data.subject = $('#subject').val()
-			form_data.message = $('#message').val()
+			form_data.name = $('#name').val();
+			form_data.email = $('#email').val();
+			form_data.subject = $('#subject').val();
+			form_data.message = $('#message').val();
 
 			$.ajax({
 				url: 'http://mis412.davidrichard.com/contact_form',
@@ -39,7 +24,6 @@
 			})
 			.done(function(response) {
 
-				console.log("success");
 				console.log(response.payload);
 	
 				$('#contact_message').html(response.message);
@@ -50,11 +34,12 @@
 			})
 			.fail(function() {
 				console.log("error");
-			})
+			});
 			
-			event.preventDefault();
 		});
 
+
+		// Dynamic Products 
 		$.ajax({
 			url: base_location,
 		})
@@ -86,10 +71,34 @@
 		.fail(function() {
 			console.log("error");
 		});
+
+
+
+		// Handle Scrolling
+		$(document).on("scroll", onScroll);
+
+		// Hanlde Click to Scroll
+		$('a[href^="#"]').on('click', function (e) {
+			e.preventDefault();
+			$(document).off("scroll");
+ 
+			$('a').each(function () {
+				$(this).removeClass('navactive');
+			})
+			$(this).addClass('navactive');
+ 
+			var target = this.hash;
+			$target = $(target);
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top+2
+			}, 500, 'swing', function () {
+				window.location.hash = target;
+				$(document).on("scroll", onScroll);
+			});
+		});
 		
 	});
 
-	var base_location = "http://mis412.davidrichard.com/product_services/darla";
  
     function build_tab(category, index) {
 
