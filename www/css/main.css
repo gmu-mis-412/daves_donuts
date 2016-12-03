@@ -388,6 +388,7 @@ h1 {
 
 .tab_wrapper .tab-pane .product img {
     float: none;
+    max-width: 280px;
 }
 
 .tab_wrapper .tab-pane .product .price {
@@ -499,6 +500,10 @@ p.sub-footer-text a{
 
 /*Contact */
 
+#contact .container {
+    min-height: 402px;
+}
+
 .contact-text{
     margin:45px auto;
 }
@@ -510,13 +515,19 @@ p.sub-footer-text a{
     /* -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.2); */
 }
 
-#contact .thank-you {
-    border: solid 1px black;
-    padding: 20px;
-    margin: 20px 40px;
+#contact .thank_you {
+    display: none;    
+}
+
+#contact .thank_you .message_wrapper {
     text-align: center;
-    font-size: 2em; 
-    display: none;  
+    padding: 20px;
+    border: solid 1px black;
+    margin: 20px;
+}
+
+#contact_message {
+    font-size: 1.5em;
 }
 
 .mail-message-area{
@@ -678,7 +689,7 @@ MEDIA QUERIES TABLET
 =========================*/
 
 
-    @media (min-width: 400px) { 
+@media (min-width: 400px) { 
     .starter_container {
         height: 100%;
     }

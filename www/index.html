@@ -93,67 +93,11 @@
                         <div class="tab_wrapper">
 
                           <!-- Nav tabs -->
-                          <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#glazed" aria-controls="glazed" role="tab" data-toggle="tab">Glazed</a></li>
-                            <li role="presentation"><a href="#holes" aria-controls="holes" role="tab" data-toggle="tab">With Holes</a></li>
-                            <li role="presentation"><a href="#noholes" aria-controls="noholes" role="tab" data-toggle="tab">Without Holes</a></li>
+                          <ul class="nav nav-tabs" role="tablist" id="product_tabs">
                           </ul>
 
                           <!-- Tab panes -->
-                          <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="glazed">
-                                <div class="sugarfix col-md-3"><img src="images/sugarfix.jpg"></div>
-                                <div class="product col-md-3">
-                                    <h2>Blue</h2>
-                                    <img src="images/nav_blue.png">
-                                    <div class="price">$1.29</div>
-                                </div>
-                                <div class="product col-md-3">
-                                    <h2>Orange</h2>
-                                    <img src="images/nav_orange.png">
-                                    <div class="price">$1.29</div>
-                                </div>
-                                <div class="product col-md-3">
-                                    <h2>Pink</h2>
-                                    <img src="images/nav_pink.png">
-                                    <div class="price">$1.29</div>
-                                </div>
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="holes">
-                                <div class="product col-md-3">
-                                    <h2>Blue</h2>
-                                    <img src="images/nav_blue.png">
-                                    <div class="price">$1.29</div>
-                                </div>
-                                <div class="product col-md-3">
-                                    <h2>Orange</h2>
-                                    <img src="images/nav_orange.png">
-                                    <div class="price">$1.29</div>
-                                </div>
-                                <div class="product col-md-3">
-                                    <h2>Pink</h2>
-                                    <img src="images/nav_pink.png">
-                                    <div class="price">$1.29</div>
-                                </div>                            
-                            </div>
-                            <div role="tabpanel" class="tab-pane" id="noholes">
-                                <div class="contact col-md-3"><img src="images/contact.jpg"></div>
-                                <div class="product col-md-3">
-                                    <h2>Blue</h2>
-                                    <img src="images/nav_blue.png">
-                                    <div class="price">$1.29</div>
-                                </div>
-                                <div class="product col-md-3">
-                                    <h2>Orange</h2>
-                                    <img src="images/nav_orange.png">
-                                    <div class="price">$1.29</div>
-                                </div>
-                                <div class="product col-md-3">
-                                    <h2>Pink</h2>
-                                    <img src="images/nav_pink.png">
-                                    <div class="price">$1.29</div>
-                                </div>                            
-                            </div>
+                          <div class="tab-content" id="product_panels">
                           </div>
 
                         </div>                        
@@ -290,8 +234,12 @@
                                     <div class="clear"></div>
                                 </form>
                             </div><!-- End Contact Form Area -->
-                            <div class="thank-you">
-                                <span id="thank-you-message"> Thanks for your submission! </span>
+                            <div class="thank_you">
+                                <div class="col-md-12">
+                                    <div class="message_wrapper">
+                                        <span id="contact_message">Message here...</span>
+                                    </div>
+                                </div>
                             </div>
                         </div><!-- End Inner -->
                     </div>
