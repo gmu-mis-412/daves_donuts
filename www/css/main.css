@@ -689,7 +689,7 @@ MEDIA QUERIES TABLET
 =========================*/
 
 
-    @media (min-width: 400px) { 
+@media (min-width: 400px) { 
     .starter_container {
         height: 100%;
     }

@@ -1,6 +1,6 @@
 
 	// Var to hold base URL for products
-	var base_location = "http://mis412.davidrichard.com/product_services/darla";
+	var base_location = "http://mis412.davidrichard.com/product_services/cabin";
 
 	$(function () {
  
@@ -49,11 +49,18 @@
 			var panel = "";
 
 			for (var i = 0; i < response.categories.length; i++) {
+
+				console.log(response.categories[i].name);
+
 				tabs += build_tab(response.categories[i], i);
 				panel = build_panel(response.categories[i], i);
 
 				var products = "";
+
 				for (var j = 0; j < response.categories[i].products.length; j++) {
+
+				console.log(response.categories[i].products[j].name);
+
 					products += build_product(response.categories[i].products[j]);
 				};
 
