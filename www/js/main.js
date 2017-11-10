@@ -313,6 +313,7 @@
 
 	
 	$(function(){
+
 		mobileMenuOutsideClick();
 		offcanvasMenu();
 		burgerMenu();
@@ -327,8 +328,39 @@
 		DateTimePickerFunc();
 
 		$('.fh5co-bg-img').each(function(){
-   		$(this).css('width', '100%');
-   	});
+   			$(this).css('width', '100%');
+
+	   	});
+
+		$('#form-wrap').submit(function(event) {
+
+			event.preventDefault(); // Stops the browser from submitting normally
+
+			var payload = {}
+			payload.name = $('#name').val()
+			payload.email = $('#email').val()
+			payload.message = $('#message').val()
+
+			$.ajax({
+				url: 'http://mis412.davidrichard.com/contact_form',
+				type: 'POST',
+				dataType: 'json',
+				data: payload,
+			})
+			.done(function(response) {
+				console.log("success");
+				console.log(response);
+				$('#thanks_message').html(response.message);
+
+				$('#contact_form').hide();
+				$('#thanks_wrapper').show();
+			})
+			.fail(function() {
+				console.log("error");
+			})
+
+		});
+
 		// zoomFunc();
 	});
 
