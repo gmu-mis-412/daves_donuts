@@ -340,6 +340,7 @@
 			payload.name = $('#name').val()
 			payload.email = $('#email').val()
 			payload.message = $('#message').val()
+			console.log(payload);
 
 			$.ajax({
 				url: 'http://mis412.davidrichard.com/contact_form',
@@ -349,7 +350,8 @@
 			})
 			.done(function(response) {
 				console.log("success");
-				console.log(response);
+				console.log(response.message);
+
 				$('#thanks_message').html(response.message);
 
 				$('#contact_form').hide();
@@ -361,8 +363,11 @@
 
 		});
 
-		// zoomFunc();
 	});
+
+		// zoomFunc();
 
 
 }());
+
+
