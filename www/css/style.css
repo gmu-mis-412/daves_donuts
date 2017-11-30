@@ -1817,4 +1817,6 @@ textarea {
   height: 721px;
 }
 
-
+#product_content p.cat_desc {
+  font-size: 0.8em;
+}
