@@ -1,5 +1,7 @@
 $(function() {
 
+// -- Tab Code
+
 	var tab_template = $('#tab_template').html();
 	var category_desc_template = $('#category_desc_template').html();
 	var product_template = $('#product_template').html();	
@@ -7,8 +9,6 @@ $(function() {
 	var base_location = "http://mis412.davidrichard.com/product_services/donuts/data.json"; // The data URL.
 
 	$.get(base_location, function(data) {
-
-		console.log(data);
 
 		for (var i = 0; i < data.categories.length; i++) {
 
@@ -30,4 +30,34 @@ $(function() {
 
 	});
 
+// -- Accordion Code
+
+	var accordion_template_variable = $('#accordion_template').html();
+	var product_template_variable = $('#product_template').html();
+
+
+	var base_location = "http://mis412.davidrichard.com/product_services/donuts/data.json"; // The data URL.
+
+	$.get(base_location, function(data) {
+
+		for (var i = 0; i < data.categories.length; i++) {
+
+			data.categories[i].index = i; // Allows me to place a category specific ID into the template.
+			$('#accordion').append(Mustache.render(accordion_template_variable, data.categories[i]));
+
+			for (var j = 0; j < data.categories[i].products.length; j++) {
+
+				console.log(data.categories[i].products[j]);
+				$('#collapse' + i + ' .panel-body').append(Mustache.render(product_template_variable, data.categories[i].products[j]));
+
+			};
+
+		};
+
+		$('#collapse0').addClass('in');
+		$('.fh5co-item:odd').addClass('margin_top');
+
+	});
+
 });
+

@@ -111,7 +111,7 @@
 	<div id="fh5co-featured-menu" class="fh5co-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 fh5co-heading animate-box">
+				<div class="col-md-12 fh5co-heading">
 					<h2>Our Delicous Menu</h2>
 					<div class="row">
 						<div class="col-md-6">
@@ -120,7 +120,7 @@
 					</div>
 				</div>
 
-				
+				<!-- Tabs -->
 
 				<ul id="category_tabs" class="nav nav-tabs" role="tablist">
 
@@ -130,7 +130,17 @@
 
 				</div>
 
+
 			</div>
+
+			<!-- Accordion -->
+
+			<div class="row">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+				</div>
+			</div>
+
 		</div>
 	</div>
 
@@ -253,8 +263,11 @@
 	<!-- Main -->
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+
 	<script src="js/menu.js"></script>
 	<script src="js/main.js"></script>
+
+	<!-- Templates -->
 
 	<script id="tab_template" type="x-tmpl-mustache">
 		<li role="presentation"><a href="#cat{{ index }}" aria-controls="{{ name }}" role="tab" data-toggle="tab">{{ name }}</a></li>
@@ -273,6 +286,23 @@
 				<h3>{{ name }}</h3>
 				<span class="fh5co-price">{{ price }}</span>
 				<p>{{ description }}</p>
+			</div>
+		</div>
+	</script>
+
+	<script id="accordion_template" type="x-tmpl-mustache">
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="headingOne">
+				<h4 class="panel-title">
+					<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{index}}" aria-expanded="true" aria-controls="collapseOne">
+						{{ name }}
+					</a>
+				</h4>
+			</div>
+			<div id="collapse{{index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+				<div class="panel-body">
+					<!-- Products -->
+				</div>
 			</div>
 		</div>
 	</script>

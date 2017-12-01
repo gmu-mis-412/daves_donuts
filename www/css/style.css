@@ -1817,6 +1817,20 @@ textarea {
   height: 721px;
 }
 
-#product_content p.cat_desc {
+#fh5co-featured-menu p.cat_desc {
   font-size: 0.8em;
+}
+
+.panel {
+  background-color: transparent;
+  color: white;
+}
+
+#fh5co-featured-menu .fh5co-item p {
+  color: white;
+}
+
+#fh5co-featured-menu .panel-title > a,
+#fh5co-featured-menu .nav-tabs > li > a {
+  font-size: 1.2em;
 }
